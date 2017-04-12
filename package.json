@@ -4,7 +4,7 @@
   "description": "A seed project for using the Karma test framework",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/karma start --single-run --browsers Firefox",
+    "test": "karma start karma.conf.js",
     "full-test": "NODE_ENV=test karma start karma.conf.js"
   },
   "repository": {
