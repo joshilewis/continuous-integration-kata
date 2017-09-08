@@ -26,6 +26,10 @@ describe('Calculator', function() {
     clickAdd: function() {
       document.getElementById('add').click();
     }
+    ,
+    clickDiv: function() {
+      document.getElementById('divide').click();
+    }
   };
 
   // inject the HTML fixture for the tests
