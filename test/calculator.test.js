@@ -32,8 +32,10 @@ describe('Calculator', function () {
         clickMultiply: function () {
             document.getElementById('multiply').click();
         }
-
-
+    ,
+    clickDivide: function() {
+      document.getElementById('divide').click();
+    }
     };
 
     // inject the HTML fixture for the tests
@@ -63,6 +65,13 @@ describe('Calculator', function () {
         controls.y = 2;
         controls.clickMultiply();
         controls.result.should.equal('10');
+  });
+
+  it('should calculate 5 for 10 / 2', function() {
+    controls.x = 10;
+    controls.y = 2;
+    controls.clickDivide();
+    controls.result.should.equal('5');
     });
 
     it('should calculate zero for invalid x value', function () {
