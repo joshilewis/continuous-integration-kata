@@ -32,6 +32,9 @@ describe('Calculator', function () {
         clickMultiply: function () {
             document.getElementById('multiply').click();
         },
+        clickCommaSeparate: function () {
+            document.getElementById('comma-separate').click();
+        },
         clickPower: function () {
             document.getElementById('power').click();
         }
@@ -96,6 +99,13 @@ describe('Calculator', function () {
         controls.y = 2;
         controls.clickMinus();
         controls.result.should.equal('3');
+    })
+
+    it('should comma separate 3 and 5 to 3,5', function () {
+        controls.x = 3;
+        controls.y = 5;
+        controls.clickCommaSeparate();
+        controls.result.should.equal('3,5');
     })
 
     it('should calculate 2 to power 3 = 8', function () {
