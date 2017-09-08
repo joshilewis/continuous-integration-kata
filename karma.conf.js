@@ -63,9 +63,9 @@ module.exports = function(config) {
     //  https://npmjs.org/browse/keyword/karma-launcher
     browsers: appConfig.karma.browsers,
 
-
+    
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: appConfig.karma.singleRun
+    singleRun: true
   });
 };
