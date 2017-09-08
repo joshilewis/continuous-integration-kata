@@ -31,6 +31,9 @@ describe('Calculator', function () {
         },
         clickMultiply: function () {
             document.getElementById('multiply').click();
+        },
+        clickPower: function () {
+            document.getElementById('power').click();
         }
     ,
     clickDivide: function() {
@@ -93,6 +96,13 @@ describe('Calculator', function () {
         controls.y = 2;
         controls.clickMinus();
         controls.result.should.equal('3');
+    })
+
+    it('should calculate 2 to power 3 = 8', function () {
+        controls.x = 2;
+        controls.y = 3;
+        controls.clickPower();
+        controls.result.should.equal('8');
     })
 
 });
