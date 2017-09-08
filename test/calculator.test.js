@@ -64,4 +64,11 @@ describe('Calculator', function() {
     controls.result.should.equal('0');
   });
 
+  it('should calculate 3 for 5 - 2', function () {
+      controls.x = 5;
+      controls.y = 2;
+      controls.clickMinus();
+      controls.result.should.equal('3');
+  })
+
 });
