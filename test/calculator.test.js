@@ -25,6 +25,9 @@ describe('Calculator', function() {
     },
     clickAdd: function() {
       document.getElementById('add').click();
+    },
+    clickMultiply: function() {
+      document.getElementById('multiply').click();
     }
   };
 
@@ -48,6 +51,13 @@ describe('Calculator', function() {
     controls.y = 2;
     controls.clickAdd();
     controls.result.should.equal('3');
+  });
+
+  it('should calculate 10 for 5 * 2', function() {
+    controls.x = 5;
+    controls.y = 2;
+    controls.clickMultiply();
+    controls.result.should.equal('10');
   });
 
   it('should calculate zero for invalid x value', function() {
